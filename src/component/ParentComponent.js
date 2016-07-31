@@ -147,7 +147,9 @@ render() {
         </Modal>
       <hr />
         <FormParentComponent {...props} text={'override'} renderType={this.state.renderType} />
-      <h2>ここから下調整中(2016/0702)</h2>
+        <hr />
+        
+      <h2>ここから下調整中(2016/08/01)</h2>
       <h2>I'm ParentComponent</h2>
       <ChildComponent user={user} func={this._upDateChildClickCount} count={this.state.count} name={this.state.name} renderType={1} />
       <hr />
