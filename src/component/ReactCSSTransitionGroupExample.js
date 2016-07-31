@@ -46,10 +46,9 @@ export default class ReactCSSTransitionGroupExample extends React.Component {
         {/*ReactCSSTransitionGroupはMountされたら動く*/}
         <ReactCSSTransitionGroup
           transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-          //trueの場合は省略できるx transitionAppear={true}
-          transitionAppear >
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          >
         {items}
       </ReactCSSTransitionGroup>
       <hr />

@@ -9,6 +9,10 @@ var filter = require('gulp-filter');
 var nodemon = require('gulp-nodemon');
 var browserSync = require('browser-sync').create();
 
+gulp.task('apply-prod-environment', function() {
+  process.env.NODE_ENV = 'production';
+});
+
 gulp.task('browserify', function() {
   browserify('./src/index.js', {
     debug: true
@@ -20,11 +24,7 @@ gulp.task('browserify', function() {
     })
     .pipe(source('app.js'))
     .pipe(buffer())
-    // .pipe(sourcemaps.init({
-      // loadMaps: true
-    // }))
     .pipe(uglify())
-    // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
 });
 
@@ -53,4 +53,4 @@ gulp.task('nodemon', function() {
   });
 });
 
-gulp.task('default', ['browserify', 'watch', 'browser-sync']);
+gulp.task('default', ['apply-prod-environment','browserify', 'watch', 'browser-sync']);

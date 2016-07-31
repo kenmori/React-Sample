@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import update from 'react-addons-update';
 export default class FormChildComponent extends React.Component {
   static propTypes = {
@@ -69,11 +68,6 @@ export default class FormChildComponent extends React.Component {
           onFocus={this._inputUserAction.bind(this, {action: 'onFocus'})} />
         <span>{this.state.action}</span>
         <hr />
-        <div>
-          <h2>React.addons</h2>
-          <h4>update</h4>
-          <div>{console.log(update, 'addons')}</div>
-        </div>
       </span>
     );
   }
