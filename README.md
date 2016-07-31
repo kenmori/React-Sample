@@ -1,22 +1,34 @@
-# React ES6 Flux PlayGround
+# React-Sample
 
-## To use
+auther: KenjiMorita
 
-### Setup
+## blog
+[http://kenjimorita.jp/react-reactjs-sample/](http://kenjimorita.jp/react-reactjs-sample/)
 
-```sh
+## demo
+[http://kenjimorita.jp/react/](http://kenjimorita.jp/react/)
+
+
+## Setting
+```bash
+git clone https://github.com/kenmori/React-Sample.git
+cd React-Sample
 npm install
 ```
 
 ### Start server
-
-```sh
+```bash
 gulp
 ```
 
 ####
 I think that it is unnecessary, there is a file of around Flux as an example,
-```playground/src/component/ParentComponent.js``` is ParentComponent
+
+```
+src/component/ParentComponent.js
+```
+is ParentComponent
 
 #### local server start
-```Server started: http://localhost:3000/```
+Server started: [http://localhost:3000/](http://localhost:3000/)
+
