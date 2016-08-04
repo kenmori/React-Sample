@@ -13,4 +13,4 @@ sprite.scssc
 .idea/
 .idea/workspace.xml
 bower_components/
-dist/app.js
+dist/*.js
