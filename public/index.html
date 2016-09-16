@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ReactSample集</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./transition.css">
+  <link rel="stylesheet" href="dist/css/transition.css">
   <style>
   body {
     width: 100%!important;
@@ -43,8 +43,22 @@
 </head>
 <body class="container">
   <div id="content"></div>
-  <script src="./dist/lib/react.js"></script>
-  <script src="./dist/lib/react-dom.js"></script>
-  <script src="./dist/app.js"></script>
+  <script src="dist/lib/react.js"></script>
+  <script src="dist/lib/react-dom.js"></script>
+  <script src="dist/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script>
+    // Initialize Fireba
+    //
+    // se
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "chat",
+      authDomain: "chat-88920.firebaseapp.com",
+      databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+      storageBucket: "<BUCKET>.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>

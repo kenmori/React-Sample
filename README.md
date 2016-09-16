@@ -30,5 +30,5 @@ src/component/ParentComponent.js
 is ParentComponent
 
 #### local server start
-Server started: [http://localhost:3000/](http://localhost:3000/)
+Server started: [http://localhost:3040/](http://localhost:3040/)
 
