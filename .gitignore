@@ -14,3 +14,5 @@ sprite.scssc
 .idea/workspace.xml
 bower_components/
 dist/*.js
+firebase.json
+database.rules.json

@@ -25,7 +25,7 @@ gulp.task('browserify', function() {
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./public/dist'))
 });
 
 gulp.task('watch', function() {
@@ -36,7 +36,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
   browserSync.init(null, {
     proxy: 'http://localhost:4000',
     port: 8000,
-    files: ["dist/**/*.*"],
+    files: ["public/dist/**/*.*"],
     browser: "google chrome",
     reloadDelay: 1000
   });

@@ -54,6 +54,7 @@
     "webpack": "^1.13.0"
   },
   "dependencies": {
+    "firebase": "^3.3.0",
     "react-router": "^2.2.4",
     "superagent": "^1.8.3"
   }
