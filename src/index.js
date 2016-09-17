@@ -3,6 +3,8 @@ import ReactDOM  from 'react-dom';
 import Perf from 'react-addons-perf';
 import $ from 'jquery';
 import ParentComponent from './component/ParentComponent';
+import FunctionComponent from './component/FunctionComponent';
+
 
 
 export default class HelloReact extends React.Component {
@@ -17,14 +19,7 @@ export default class HelloReact extends React.Component {
         <p>~小さい部品を数多く違った方法で作って理解する~</p>
         <p>author: <a href="https://github.com/kenmori">kenmori</a></p>
         <p>blog: <a href="http://kenjimorita.jp/">bukostunikki</a></p>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <FunctionComponent />    
         <ParentComponent />
             </div>
       </div>
