@@ -16,13 +16,21 @@ export const addTodo = (text) => {
 	}
 }
 
-export const complateTodo = (index) => {
+
+export function toggleTodo(index) {
 	return {
-		type: COMP_TODO
+		type: TOGGLE_TODO,
 		index
-	}	
+	}
 }
 
+// export const complateTodo = (index) => {
+// 	return {
+// 		type: COMP_TODO,
+// 		index
+// 	}	
+// }
+//
 export const setVisibilityFilter = (filter) => {
 	return {
 		type: SET_VISIBILITY_FILTER,
