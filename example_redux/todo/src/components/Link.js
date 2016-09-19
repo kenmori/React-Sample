@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const Link = ({ active, children, onClick }) => (
+const Link = ({ active, children, onClick }) => {
 	if (active) {
 		return <span>{children} </span>
 	}
@@ -8,13 +8,13 @@ const Link = ({ active, children, onClick }) => (
 		<a href='#'
 			onClick={e => {
 				e.preventDefault()
-				onClick()
+					onClick()
 			}}
 		>
 		{children}
 		</a>
 	)
-)
+}
 
 
 Link.propTypes = {

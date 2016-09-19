@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux'
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions/action'
-const  { SHOW_ALL } = VisibilityFilters
-
+import todos from './todos'
+import visibilityFilter from './visibilityFilter'
 
 
 
