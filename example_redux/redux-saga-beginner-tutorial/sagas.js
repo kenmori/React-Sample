@@ -1,5 +1,5 @@
 import { takeEvery, delay } from 'redux-saga'
-import { put } from 'redux-saga/effects'
+import { put, call } from 'redux-saga/effects'
 
 export function * helloSaga() {
     console.log('Hello Sagas!')
@@ -7,7 +7,10 @@ export function * helloSaga() {
 
 //Saga
 export function* incrementAsync(){
-    yield delay(1000)//Promiseが帰ってくるまで遅らせている
+    yield call(delay, 1000)//Promiseが帰ってくるまで遅らせている call(delay, 1000)とdelay(1000)の違い.delayはnextが渡ってくる前に計算される
+    //callerはコード実行中のミドルウェアである可能性があります。また、返されたジェネレータを超えるジェネレータ関数と反復処理を実行するテストコードもまたミドルウェアである可能性がある。
+    //callerが取得したPromiseは何なのかをテストする必要がある(??)
+
     yield put({ type: 'INCREMENT' })//sotoreへのactionをdispatch
 }
 //yield objects are a kind of instruction to be interpreted by the middleware
