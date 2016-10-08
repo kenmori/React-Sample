@@ -1,5 +1,5 @@
-import { takeEvery, delay } from 'redux-saga'
-import { put, call } from 'redux-saga/effects'
+import { takeEvery, delay, takeEvery } from 'redux-saga'
+import { put, call, fork } from 'redux-saga/effects'
 
 export function * helloSaga() {
     console.log('Hello Sagas!')
@@ -21,7 +21,24 @@ export function* watchIncrementAsync() {
     //INCREMENT_ASYNCのactionがdispathcされることに対してListenerし、される毎にincrementAsyncを実行する
 }
 
-//これらの2つのSagaを一回でスタートさせる必要がある
+
+//the task that will perform the asynchronous action:
+export function* fetchData(action) {
+    try {
+        const data = yield call(Api.fetchUser, action.payload.url)
+        yield put({type: 'FETCH_SUCCEEDED', data})
+    } catch (error) {
+        yield put({type: 'FETCH_FAILED', error})
+    }
+}
+
+
+function * watchFetchData() {
+    yiel* takeEvery('FETCH_REQUESTED', fetchData)
+}
+
+
+//Sagaを一回でスタートさせる必要がある
 //single entry point
 
 export default function * rootSaga() {
@@ -30,3 +47,6 @@ export default function * rootSaga() {
         watchIncrementAsync()//結果として生じるGeneratorは並列でスタートする
     ]
 }
+
+
+
