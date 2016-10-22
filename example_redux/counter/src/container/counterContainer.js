@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement} from '../actionCreaters'
+import { increment, decrement} from '../actionCreaters/index'
 import Counter from '../components/Counter'
+
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,9 +17,9 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-const connectedCounter = connect(
+const ConnectedCounter = connect(
     mapStateToProps,
     mapDispatchToProps,
 )(Counter)
 
-export default connectedCounter
+export default ConnectedCounter

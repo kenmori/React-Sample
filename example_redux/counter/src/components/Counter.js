@@ -1,11 +1,16 @@
-import { PropTypes } from 'react'
+import React, { PropTypes, Component } from 'react'
 
-const Counter = ({increment, decrement, value}) => {
+class Counter extends Component {
+	render(){
+		return(
+
 		<p>
-			<div></div>
-			<button onClick={increment}>increment +</button>
-			<button onClick={decrement}>decrement -</button>
+			<div>{this.props.value}</div>
+			<button onClick={this.props.increment}>increment +</button>
+			<button onClick={this.props.decrement}>decrement -</button>
 		</p>
+		)
+	}
 }
 
 

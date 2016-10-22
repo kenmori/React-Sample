@@ -1,14 +1,18 @@
-import React from 'react'
-import { connect } from'react-redux'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 
-const AppContainer = ({ dispatch }) => {
-    <div>
-        fafa
-    </div>
+class AppContainer extends Component {
+    render (){
+        return(
+            <div>
+                fafa
+            </div>
+        )
+    }
 }
 
-let connectedAppContainer = connect()(AppContainer)
-export default connectedAppContainer
+let ConnectedAppContainer = connect()(AppContainer)
+export default ConnectedAppContainer
 
 

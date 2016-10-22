@@ -1,11 +1,16 @@
-import { PropTypes } from 'react'
+import React ,{ PropTypes, Component } from 'react'
 
 
-const InputText = ({text, onChange})=> {
+class InputText extends Component {
+    render() {
+        return(
+
     <div>
-        <input type='text' defaultValue='' onChange={onChange} />
-        <div>{text}</div>
+        <input type='text' defaultValue='' onChange={this.props.onChange} />
+        <div>{this.props.text}</div>
     </div>
+        )
+    }
 }
 
 export default InputText

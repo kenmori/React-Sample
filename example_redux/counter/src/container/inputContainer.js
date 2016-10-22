@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import InputText from '../components/InputText'
-import { onChange} from '../actionCreaters'
+import {onChange} from '../actionCreaters'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,9 +15,9 @@ const mapDispatchToProps = dispatch => {
         }
     }
 
-const connectedInput = connect(
+const ConnectedInput = connect(
     mapStateToProps,
     mapDispatchToProps
 )(InputText)
 
-export default connectedInput
+export default ConnectedInput
