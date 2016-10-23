@@ -1,13 +1,16 @@
-const counter = (state = 0, action) => {
+const initialState = {
+    value : 0
+}
+
+const counter = (state = initialState, action) => {
+    console.log(state, action)
     switch (action.type) {
         case 'INCREMENT':
-            return {
-                value: state +1
-            }
+            return Object.assign({}, state, {value: state.value + 1})
+
         case 'DECREMENT':
-            return {
-                value: state -1
-            }
+            return Object.assign({}, state, {value: state.value - 1})
+
         default:
             return state
     }
