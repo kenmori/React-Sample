@@ -1,9 +1,6 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 
 class Counter extends Component {
-	constructor(props){
-		super(props)
-	}
 	render(){
 		const {increment, decrement} = this.props
 		const {value} = this.props.counter

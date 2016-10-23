@@ -1,9 +1,8 @@
-import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {fafa }from '../actionCreaters/counterAction'
-import {counterDecrement }from '../actionCreaters/counterDecrement'
+import { incrementActionCreator }from '../actionCreaters/counterIncrement'
+import { decrementActionCreator }from '../actionCreaters/counterDecrement'
 import Counter from '../components/Counter'
-import {bindActionCreators} from 'redux'
+import { bindActionCreators } from 'redux'
 
 
 
@@ -15,7 +14,6 @@ import {bindActionCreators} from 'redux'
 //mapStateToPropsはコンポーネントが新しい値を取得したら実行される(親からのprops変更や
 // ownPropsを使った時、に再実行される)
 function mapStateToProps(state, ownProps){
-    console.log(state)
     return state
 }
 
@@ -24,11 +22,11 @@ function mapStateToProps(state, ownProps){
 //もしfunctionが渡されたら、dispatchが与えられる
 //もし省略されたらデフォルトの実装がコンポーネントの中のpropsにdispatchをインジェクトする
 //ownPropsはコンポーネントのpropsにわたされ、値が新しく渡ってくるたび実行される
-function mapDispatchToProps(dispatch, ownProps)//:dispatchProps
- {
+//return : dispatchProps
+function mapDispatchToProps(dispatch, ownProps) {
     return {
-        increment : bindActionCreators(fafa, dispatch),
-        decrement: bindActionCreators(counterDecrement, dispatch)
+        increment : bindActionCreators(incrementActionCreator, dispatch),
+        decrement: bindActionCreators(decrementActionCreator, dispatch)
         }
     }
 

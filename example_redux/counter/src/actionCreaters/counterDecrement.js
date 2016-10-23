@@ -1,9 +1,10 @@
 import {DECREMENT} from '../actionTypes/index'
 
-export function counterDecrement(value){
-    console.log(DECREMENT, value);
+export function decrementActionCreator(action){
     return {
-        type: value.type,
-        value: value.value
+        type: DECREMENT,
+        value: action.value
     }
 }
+
+

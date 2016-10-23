@@ -3,7 +3,6 @@ const initialState = {
 }
 
 const counter = (state = initialState, action) => {
-    console.log(state, action)
     switch (action.type) {
         case 'INCREMENT':
             return Object.assign({}, state, {value: state.value + 1})

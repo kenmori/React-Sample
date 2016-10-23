@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import InputText from '../components/InputText'
 import {onChange} from '../actionCreaters'
