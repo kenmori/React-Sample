@@ -5,11 +5,11 @@ class Counter extends Component {
 		const {increment, decrement} = this.props
 		const {value} = this.props.counter
 		return(
-			<p>
+			<div>
 				<div>{value}</div>
 				<button onClick={()=>{increment({type:'INCREMENT', value : value + 1})}}>increment +</button>
 				<button onClick={()=>{decrement({type:'DECREMENT', value : value -1})}}>decrement -</button>
-			</p>
+			</div>
 		)
 	}
 }

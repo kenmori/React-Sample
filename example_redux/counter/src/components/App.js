@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ConnectedAppContainer from '../container/AppContainer'
-import InputContainer from '../container/InputContainer'
+import ConnectedInput from '../container/InputContainer'
 import ConnectedCounter from '../container/CounterContainer'
 
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
         <div>
             <ConnectedAppContainer />
-            <InputContainer />
+            <ConnectedInput />
             <ConnectedCounter />
         </div>
         )
