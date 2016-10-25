@@ -1,15 +1,20 @@
-import React from 'react'
-import connectedAppContainer from '../container/AppContainer'
-import inputContainer from '../container/inputContainer'
-import counterContainer from '../container/counterContainer'
+import React, {Component} from 'react'
+import ConnectedAppContainer from '../container/AppContainer'
+import InputContainer from '../container/InputContainer'
+import CounterContainer from '../container/CounterContainer'
 
 
-const App = () => {
-    <div>
-        <connectedAppContainer />
-        <inputContainer />
-        <counterContainer />
-    </div>
+class App extends Component {
+    render(){
+
+    return (
+        <div>
+            <ConnectedAppContainer />
+            <InputContainer />
+            <CounterContainer />
+        </div>
+        )
+    }
 }
 
 export default App
