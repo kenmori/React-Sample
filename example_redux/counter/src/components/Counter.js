@@ -1,14 +1,15 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 
 class Counter extends Component {
 	render(){
+		const {increment, decrement} = this.props
+		const {value} = this.props.counter
 		return(
-
-		<p>
-			<div>{this.props.value}</div>
-			<button onClick={this.props.increment}>increment +</button>
-			<button onClick={this.props.decrement}>decrement -</button>
-		</p>
+			<div>
+				<div>{value}</div>
+				<button onClick={()=>{increment({type:'INCREMENT', value : value + 1})}}>increment +</button>
+				<button onClick={()=>{decrement({type:'DECREMENT', value : value -1})}}>decrement -</button>
+			</div>
 		)
 	}
 }

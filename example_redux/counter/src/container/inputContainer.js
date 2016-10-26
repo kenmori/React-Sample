@@ -1,17 +1,15 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import InputText from '../components/InputText'
-import {onChange} from '../actionCreaters'
+import { onChange } from '../actionCreaters/changeText'
+import { bindActionCreators } from 'redux'
 
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        text: state.text
-    }
+function mapStateToProps(state, ownProps){
+    return state
 }
-const mapDispatchToProps = dispatch => {
+function mapDispatchToProps(dispatch){
     return {
-            onChange: (text) => {dispatch(onChange(text))}
+            onChange: bindActionCreators(onChange, dispatch)
         }
     }
 

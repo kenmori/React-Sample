@@ -1,9 +1,12 @@
-const input = (state = '', action) => {
+const initialState = {
+    text : ''
+}
+
+const input = (state = initialState, action) => {
     switch (action.type) {
-        case 'TEXT':
-            return {
-                text: action.text
-            }
+        case 'ONCHANGE':
+            return Object.assign({}, state, action.text)
+            
         default:
             return state
     }
