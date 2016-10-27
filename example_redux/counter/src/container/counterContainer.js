@@ -1,7 +1,6 @@
 
 import { connect } from 'react-redux'
-import { incrementActionCreator }from '../actionCreaters/counterIncrement'
-import { decrementActionCreator }from '../actionCreaters/counterDecrement'
+import * as counterAction from '../actionCreaters/counterAction'
 import Counter from '../components/Counter'
 import { bindActionCreators } from 'redux'
 
@@ -24,10 +23,12 @@ function mapStateToProps(state, ownProps){
 //もし省略されたらデフォルトの実装がコンポーネントの中のpropsにdispatchをインジェクトする
 //ownPropsはコンポーネントのpropsにわたされ、値が新しく渡ってくるたび実行される
 //return : dispatchProps
+
+
 function mapDispatchToProps(dispatch, ownProps) {
     return {
-        increment : bindActionCreators(incrementActionCreator, dispatch),
-        decrement: bindActionCreators(decrementActionCreator, dispatch)
+        increment : bindActionCreators(counterAction.incrementActionCreator, dispatch),
+        decrement: bindActionCreators(counterAction.decrementActionCreator, dispatch)
         }
     }
 
