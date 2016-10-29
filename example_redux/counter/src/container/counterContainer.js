@@ -23,8 +23,6 @@ function mapStateToProps(state, ownProps){
 //もし省略されたらデフォルトの実装がコンポーネントの中のpropsにdispatchをインジェクトする
 //ownPropsはコンポーネントのpropsにわたされ、値が新しく渡ってくるたび実行される
 //return : dispatchProps
-
-
 function mapDispatchToProps(dispatch, ownProps) {
     return {
         increment : bindActionCreators(counterAction.incrementActionCreator, dispatch),
