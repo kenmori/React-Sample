@@ -1,11 +1,12 @@
 import { combineReducers } from 'redux'
 import  counter from './counterReducer'
 import input from './inputReducer'
+import { routerReducer } from 'react-router-redux'
 
-
-const appReducer = combineReducers({
-    counter,
-    input
+export const appReducer = combineReducers({
+    counter: counter,
+    input: input,
+    routing : routerReducer
 })
 export default appReducer
 

@@ -5,7 +5,9 @@ import { connect } from 'react-redux'
 class AppContainer extends Component {
     render (){
         return(
-            <div>Counter-with-React-Reux</div>
+            <div>
+            <h1>React-Reux-Sample</h1>
+            </div>
         )
     }
 }
