@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import ConnectedAppContainer from '../container/AppContainer'
+
 class App extends Component {
     render(){
+        const {location, children} = this.props
     return (
         <div>
             <ConnectedAppContainer />
-            {this.props.children}
+            <div>pathname is { location.pathname }</div>
+            { children }
         </div>
         )
     }

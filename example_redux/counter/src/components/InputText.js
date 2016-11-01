@@ -6,11 +6,10 @@ class InputText extends Component {
         const {onChange } = this.props;
         const { text } = this.props.input
         return(
-
-    <div>
-        <input type='text' defaultValue='' onChange={(event)=>{onChange({type: 'ONCHANGE', text: event.target.value})}} />
-        <div>{text}</div>
-    </div>
+            <div>
+                <input type='text' defaultValue='' placeholder="wirte something" onChange={(event)=>{onChange({type: 'ONCHANGE', text: event.target.value})}} />
+                <div>{text}</div>
+            </div>
         )
     }
 }
