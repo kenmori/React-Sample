@@ -150,7 +150,7 @@ render() {
         <hr />
         
       <h2>ここから下調整中(2016/08/01)</h2>
-      <h2>I'm ParentComponent</h2>
+      <h2>Im ParentComponent</h2>
       <ChildComponent user={user} func={this._upDateChildClickCount} count={this.state.count} name={this.state.name} renderType={1} />
       <hr />
       <ChildComponent user={user} name={this.state.name} renderType={2} />
