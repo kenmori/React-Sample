@@ -9,6 +9,8 @@ import ReactCSSTransitionGroupExample from './ReactCSSTransitionGroupExample';
 import UpdateComponent from './UpdateComponent';
 import ImmutableComponent from './ImmutableComponent';
 import TimerMixinComponent from './TimerMixinComponent';
+import  {faf} from '../iiHOC/iiHOC';
+import HigherOrderComponent from './HigherOrderComponent';
 import ModalComponent from './ModalComponent';
 // import ReactCSSTransitionGroupImageCarousel from
 // './ReactCSSTransitionGroupImageCarousel';
@@ -37,7 +39,7 @@ export default class ParentComponent extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
   componentWillMount() {
-    console.log('componentWillMount');
+
   }
   componentDidMount() {
     console.log('componentDidMount');
@@ -45,16 +47,6 @@ export default class ParentComponent extends React.Component {
   componentWillReceiveProps(nextProps) {
     console.log('componentWillReciveProps');
   }
-  // shouldComponentUpdate(nextProps, nextState, context) {
-  //   console.log(nextState);
-  //   console.log(this.state.name);
-  //   console.log(context);
-  //   // if(nextState.name == 'kenji'){
-  //   //   return true;
-  //   // } else {
-  //   //   return false;
-  //   // }
-  // }
   componentWillUpdate(){
     console.log('componentWillUpdate');
   }
@@ -85,41 +77,41 @@ export default class ParentComponent extends React.Component {
     closeModal() {
         this.setState({modalIsOpen: false});
     }
-render() {
-  //オブジェクトをprops経由で渡す
-  let user = {
-    "id": 3,
-    "age": 22
-  };
-  //spread Attribute;
-  let props = {};
-  props.swapped=true;
-  props.text='default';
-  props.rightChildren=<Right />;
-  props.leftChildren=<Left />;
-  // const map = ['待機中','鑑定中', '予約受付中', '時間外'];
-    //modalSetting
-    const customStyles = {
-        overlay : {
-            background: 'rgba(0,0,0, .4)'
-        },
-        content : {
-            top                   : '50%',
-            left                  : '50%',
-            right                 : 'auto',
-            bottom                : 'auto',
-            marginRight           : '-50%',
-            transform             : 'translate(-50%, -50%)',
-            width                 : '72%'
-        }
-    };
+    render() {
+        //オブジェクトをprops経由で渡す
+        let user = {
+            "id": 3,
+            "age": 22
+        };
+        //spread Attribute;
+        let props = {};
+        props.swapped=true;
+        props.text='default';
+        props.rightChildren=<Right />;
+        props.leftChildren=<Left />;
+        // const map = ['待機中','鑑定中', '予約受付中', '時間外'];
+        //modalSetting
+        const customStyles = {
+            overlay : {
+                background: 'rgba(0,0,0, .4)'
+            },
+            content : {
+                top                   : '50%',
+                left                  : '50%',
+                right                 : 'auto',
+                bottom                : 'auto',
+                marginRight           : '-50%',
+                transform             : 'translate(-50%, -50%)',
+                width                 : '72%'
+            }
+        };
 
-    return  (
-      <div>
-      {/*<div className={`ratewrap${this.state.id} iii`}>
-       <p className='rate'>{`${map[this.state.id]}`}</p>
-       { this.state.id == 10 ? <div>eee</div> : ''}
-       </div>*/}
+        return  (
+            <div>
+                <div id='a'></div>
+                ReactDOM.render(<faf />, document.getElementById('a'));
+
+
       <TabComponent />
       <ReactCSSTransitionGroupExample />
       <UpdateComponent />
@@ -165,9 +157,9 @@ render() {
       <TodoComponent />
       {/*<ReactCSSTransitionGroupImageCarousel />*/}
       <CreateFragmentComponent func={this._changeStateClick} />
-</div>
+        </div>
 
-);
+    );
 }
 }
 
