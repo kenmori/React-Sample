@@ -14,7 +14,8 @@ extends React.Component {
   }
   componentDidMount() {
     let that = this;
-    request.get('http://localhost:3005/users/',function (error,res){
+    request.get('http://localhost:3000/users/',function (error,res){
+      if(error) {console.log(error);return;}
       that.setState({
         users: res.body
       });
@@ -22,7 +23,8 @@ extends React.Component {
   }
   onClickUpdate(){
     let that = this;
-    request.get('http://localhost:3005/users/',function (error,res){
+    request.get('http://localhost:3000/users/',function (error,res){
+      if(error) {console.log(error);return;}
       that.setState({
         users: res.body
       });
@@ -32,7 +34,7 @@ extends React.Component {
     const that = this;
     const text = this.refs.text.value;
     console.log(text);
-    request.post('http://localhost:3005/users/')
+    request.post('http://localhost:3000/users/')
     .send({
       id : this.state.users.length + 1,
       name: text
