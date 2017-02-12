@@ -11,13 +11,4 @@ export default class FunctionComponent extends React.Component {
 
 
 const SEND = 'SEND';
-export default {
-	send(value){
-		return {
-			type: SEND,
-			value
-		};
-	}
-};
-
 
