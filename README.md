@@ -32,3 +32,6 @@ is ParentComponent
 #### local server start
 Server started: [http://localhost:3040/](http://localhost:3040/)
 
+#### JSON server start
+json-server db.json
+
