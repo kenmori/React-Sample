@@ -35,3 +35,6 @@ class Example extends React.Component {
 }
 
 export const faf = ExtraPropsComponent(Example);
+
+
+
