@@ -41,7 +41,7 @@
     "json-server": "^0.8.10",
     "marked": "^0.3.3",
     "npm": "^3.8.0",
-    "react": "^15.3.0",
+    "react": "^16.0.0",
     "react-addons-create-fragment": "^15.3.0",
     "react-addons-css-transition-group": "^15.3.0",
     "react-addons-perf": "^15.3.0",
